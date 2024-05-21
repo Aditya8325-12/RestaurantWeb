@@ -1,12 +1,15 @@
 import React from "react";
 
 const CardView = ({ data }) => {
+
+  // destucation  
+  const { price, category, dishName, description, image } = data;
   return (
     <div className="card rounded-t-md bg-slate-50 px-2 shadow-lg">
-      <p className="p-2">{data.price} </p>
-      <p className="px-2 text-lg">{data.category}</p>
-      <h2 className="px-2 py-1 text-2xl">{data.dishName}</h2>
-      <p className="px-3 text-sm">{data.description}</p>
+      <p className="p-1">{price} </p>
+      <p className="px-2 text-lg">{category}</p>
+      <h2 className="px-2 py-1 text-2xl">{dishName}</h2>
+      <p className="px-3 text-sm">{description}</p>
       <div className="flex items-center justify-between px-3 py-1">
         <hr className="w-10/12 bg-black" />
         <p className="text-sm font-bold">READ</p>
@@ -14,7 +17,7 @@ const CardView = ({ data }) => {
       <div className="flex items-center justify-center p-3">
         <img
           className="h-56 w-full rounded-md object-cover"
-          src={data.image}
+          src={image}
           alt=""
         />
       </div>
